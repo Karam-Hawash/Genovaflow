@@ -1,0 +1,362 @@
+/* Custom styles for blog post page */
+
+/* Header height reduction - 30% less padding */
+.header {
+    padding-top: 1.05rem !important;    /* Reduced from 1.5rem by 30% */
+    padding-bottom: 1.05rem !important; /* Reduced from 1.5rem by 30% */
+}
+
+/* Logo styling */
+.logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.logo-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    overflow: visible;
+}
+
+/* Make header logo image 5x larger */
+.header .logo-image {
+    position: relative;
+    z-index: 5;
+    overflow: visible;
+}
+
+.header .logo-image img {
+    position: absolute;
+    width: 40px; /* Keep original dimensions for the container */
+    height: 40px;
+    transform: scale(7); /* Scale up by 7x */
+    transform-origin: center; /* Center of the image */
+    pointer-events: none; /* Prevents the enlarged image from blocking clicks */
+    transition: transform 0.3s ease;
+}
+
+/* Add a pseudo-element to create space-taking placeholder */
+.header .logo-image::before {
+    content: '';
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+/* Keep the text container positioned correctly */
+.header .logo-text-container {
+    position: relative;
+    z-index: 6; /* Place above the enlarged logo */
+    margin-left: 12px; /* Keep the original spacing */
+}
+
+/* Create a separate rule for the footer logo to prevent it from being enlarged */
+.footer-logo .logo-image img {
+    position: static;
+    width: 30px;
+    height: 30px;
+    transform: none;
+    pointer-events: auto;
+}
+
+.logo-text-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-text {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    color: var(--light-text);
+    line-height: 1.2;
+}
+
+.location {
+    font-size: 0.8rem;
+    margin-left: 0;
+    opacity: 0.7;
+    line-height: 1.2;
+}
+
+/* Share buttons styling */
+.share-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--light-text);
+    transition: all 0.3s ease;
+}
+
+.share-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.share-button.twitter:hover {
+    background-color: #1DA1F2;
+}
+
+.share-button.facebook:hover {
+    background-color: #4267B2;
+}
+
+.share-button.linkedin:hover {
+    background-color: #0077B5;
+}
+
+.share-button.reddit:hover {
+    background-color: #FF4500;
+}
+
+/* Email Subscription Bar */
+.email-subscription-bar {
+    background-color: var(--bg-dark);
+    padding: 3rem 2rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.subscription-container-inline {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.subscription-text {
+    flex: 1;
+}
+
+.subscription-text h3 {
+    color: var(--light-text);
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.subscription-text p {
+    color: var(--light-text);
+    opacity: 0.7;
+}
+
+.subscription-form-inline {
+    display: flex;
+    gap: 1rem;
+    max-width: 500px;
+    flex: 1;
+}
+
+.subscription-form-inline input {
+    flex: 1;
+    padding: 1rem 1.5rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    color: var(--light-text);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.subscription-form-inline input:focus {
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: var(--accent-color);
+}
+
+.subscribe-btn-inline {
+    padding: 1rem 2rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.subscribe-btn-inline:hover {
+    background-color: #e47d0e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+    .subscription-container-inline {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .subscription-form-inline {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Footer alignment */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    align-items: flex-start;
+}
+
+.footer-logo {
+    margin-bottom: 1rem;
+    width: 350px;
+}
+
+.footer-logo .logo-text-container {
+    width: 300px;
+    padding-right: 30px;
+}
+
+.footer-logo .logo-text {
+    font-size: 1.4rem;
+    white-space: nowrap;
+}
+
+.footer-logo .location {
+    white-space: nowrap;
+}
+
+.footer-links {
+    display: flex;
+    gap: 4rem;
+    justify-content: space-between;
+    flex: 1;
+    max-width: 700px;
+}
+
+.footer-column {
+    flex: 1;
+}
+
+/* Animation and success message styles */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+.subscription-success {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(76, 175, 80, 0.1);
+    border: 1px solid rgba(76, 175, 80, 0.3);
+    border-radius: 4px;
+    padding: 1rem;
+    color: var(--light-text);
+    width: 100%;
+    gap: 10px;
+}
+
+.main-nav ul li.active a::after {
+    width: 100%;
+}
+
+.main-nav ul li.active a {
+    color: var(--accent-color);
+}
+
+/* CTA Section Styling */
+.cta-section {
+    background: linear-gradient(135deg, rgba(30, 30, 45, 0.9) 0%, rgba(55, 55, 80, 0.9) 100%);
+    border-radius: 12px;
+    padding: 40px;
+    margin: 60px 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.cta-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(230, 193, 90, 0.1) 0%, transparent 70%);
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.cta-section:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+}
+
+.cta-content {
+    position: relative;
+    z-index: 1;
+}
+
+.cta-content p {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #ffffff;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #e6c15a;
+    color: #0a0a0a;
+    padding: 12px 30px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(230, 193, 90, 0.3);
+    border: 2px solid transparent;
+}
+
+.cta-button:hover {
+    background-color: transparent;
+    color: #e6c15a;
+    border-color: #e6c15a;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+    .cta-section {
+        padding: 30px 20px;
+        margin: 40px 0;
+    }
+    
+    .cta-content p {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+    
+    .cta-button {
+        padding: 10px 25px;
+        font-size: 16px;
+    }
+} 

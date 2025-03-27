@@ -1,0 +1,80 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.menu-icon, .contact-us-button {
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+/* Default styles for menu icon */
+.menu-icon {
+    background-color: #007bff;
+    color: white;
+}
+/* Default styles for contact us button */
+.contact-us-button {
+    background-color: #28a745;
+    color: white;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Genovaflow - AI Automation Agency specializing in chatbots, voice agents, and business automation solutions">
+    <meta name="keywords" content="AI, automation, chatbots, voice agents, business solutions">
+    <title>Genovaflow - AI Automation Agency</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Note: All widget icons should have transparent backgrounds -->
+    <!-- Note: Menu effects have been simplified, keeping only X logo design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+</head>
+<body>
+    <div class="top-middle-logo">
+        <img src="images/flow.svg" alt="Genovaflow Logo">
+    </div>
+    <div class="background">
+        <video id="background-video" autoplay loop muted playsinline>
+            <source src="images/379dbb5327208b9da1a6788da0cabf14_restored.webm" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="widgets" style="width: 200%; gap: 6.9%;">
+        <a href="contact.html" class="widget" id="contact">
+            <img src="images/contact-us.svg" alt="Contact Icon" class="widget-icon">
+            <div class="widget-hover">
+                Contact Us
+            </div>
+        </a>
+
+        <a href="services+/index.html" class="widget" id="services">
+            <img src="images/services.svg" alt="Services Icon" class="widget-icon">
+            <div class="widget-hover">
+                Services +
+            </div>
+        </a>
+
+        <a href="../blog/blog.html" class="widget" id="blog">
+            <img src="images/form-icon.svg" alt="Blog Icon" class="widget-icon">
+            <div class="widget-hover">
+                Blog
+            </div>
+        </a>
+
+        <a href="team.html" class="widget" id="about">
+            <img src="images/we.svg" alt="About Icon" class="widget-icon">
+            <div class="widget-hover">
+                Team
+            </div>
+        </a>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

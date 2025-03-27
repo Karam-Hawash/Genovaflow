@@ -1,0 +1,50 @@
+/* Header height adjustment - 30% shorter */
+.header {
+    padding-top: 1.05rem !important;    /* Reduced from 1.5rem by 30% */
+    padding-bottom: 0.5rem !important; /* Reduced from 1.5rem by 30% */
+}
+
+/* Header spacer to prevent content overlap on smaller screens */
+.header-spacer {
+    display: none; /* Hidden by default on desktop */
+    background-color: #000000; /* Match the page background */
+}
+
+/* Blog content spacing to prevent header overlap */
+.blog-content {
+    padding-top: 100px; /* Default padding for desktop */
+}
+
+/* Media queries for responsive header spacing */
+@media (max-width: 1024px) {
+    .header-spacer {
+        display: block; /* Show on all screens below desktop */
+        height: 30px; /* Small height for medium screens */
+    }
+    
+    .blog-content {
+        padding-top: 110px; /* Slightly more padding for medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .header-spacer {
+        height: 60px; /* Increase height for tablets */
+    }
+    
+    /* Add more top padding to the blog-content container */
+    .blog-content {
+        padding-top: 130px; /* More padding for tablets */
+    }
+}
+
+@media (max-width: 480px) {
+    .header-spacer {
+        height: 80px; /* More height on small mobile screens */
+    }
+    
+    /* Increase top padding for very small screens */
+    .blog-content {
+        padding-top: 160px; /* Maximum padding for small phones */
+    }
+} 

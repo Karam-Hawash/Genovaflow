@@ -1,0 +1,488 @@
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .destination-title {
+        font-size: 28px;
+    }
+
+    .card {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+    }
+
+    .description-text {
+        max-width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        position: relative;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+    
+    .hamburger-menu {
+        display: block;
+        cursor: pointer;
+        order: 3;
+        z-index: 102;
+    }
+    
+    .hamburger-menu span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: white;
+        margin: 5px 0;
+        transition: all 0.3s;
+    }
+    
+    .hamburger-menu.active span:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    .hamburger-menu.active span:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .hamburger-menu.active span:nth-child(3) {
+        transform: rotate(-45deg) translate(5px, -5px);
+    }
+    
+    .main-nav {
+        order: 4;
+        width: 100%;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        z-index: 101;
+    }
+    
+    .main-nav.active {
+        max-height: 300px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+        gap: 15px;
+    }
+    
+    .header-icons {
+        order: 2;
+    }
+    
+    .destination-title {
+        font-size: 24px;
+    }
+    
+    .card {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+    }
+    
+    .description-text {
+        max-width: 80%;
+    }
+    
+    .search-container,
+    .subscription-container {
+        padding: 20px;
+    }
+    
+    .navigation-controls {
+        position: relative;
+        bottom: auto;
+        margin: 20px auto;
+    }
+    
+    .carousel-navigation {
+        position: relative;
+        bottom: auto;
+        transform: none;
+        left: auto;
+        justify-content: center;
+        margin: 15px auto;
+    }
+    
+    .page-number {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin-left: 10px;
+    }
+    
+    .show-all-btn {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        margin: 15px auto;
+        display: block;
+        width: fit-content;
+    }
+    
+    .nav-arrow {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .nav-dot {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .logo-text {
+        font-size: 18px;
+    }
+    
+    .location {
+        font-size: 12px;
+    }
+    
+    .destination-title {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .description-text {
+        display: block; /* Always show description text */
+        font-size: 16px;
+        text-align: center;
+        transform: none;
+        margin: 0 auto;
+    }
+    
+    .destination-description {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        max-width: 90%;
+        margin: 15px auto;
+        text-align: center;
+    }
+    
+    .card {
+        width: calc(50% - 10px);
+        margin-right: 10px;
+    }
+    
+    .carousel {
+        height: auto;
+        padding: 0 10px;
+    }
+    
+    .card-image {
+        height: 180px;
+    }
+    
+    .card-content {
+        padding: 15px;
+    }
+    
+    .navigation-controls {
+        bottom: 10px;
+        width: 100%;
+        justify-content: center;
+    }
+    
+    .carousel-navigation {
+        gap: 5px;
+    }
+    
+    .nav-arrow {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .search-results-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .signup-btn {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+    
+    .carousel-container {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 15px;
+    }
+    
+    .logo-image img {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .logo-text {
+        font-size: 16px;
+    }
+    
+    .location {
+        font-size: 10px;
+    }
+    
+    .main-nav li {
+        margin-bottom: 5px;
+    }
+    
+    /* Two cards display on small screens */
+    .cards-container {
+        justify-content: center;
+    }
+    
+    .card {
+        width: calc(50% - 8px); /* Two cards with smaller gap */
+        margin-right: 8px;
+        height: auto;
+        min-height: 150px;
+    }
+    
+    /* Show description text below the cards */
+    .description-text {
+        display: block;
+        width: 100%;
+        max-width: none;
+        margin: 15px auto;
+        text-align: center;
+        font-size: 14px;
+        line-height: 1.4;
+        position: relative;
+        z-index: 5;
+    }
+    
+    .destination-description {
+        margin-bottom: 20px;
+        max-width: 100%;
+        left: 0;
+        text-align: center;
+    }
+    
+    .card-image {
+        height: 160px;
+    }
+    
+    .card-title {
+        font-size: 16px;
+    }
+    
+    .card-description {
+        font-size: 14px;
+        display: block;
+    }
+    
+    .nav-arrow {
+        width: 30px;
+        height: 30px;
+        margin: 0 10px;
+    }
+    
+    .nav-dot {
+        width: 8px;
+        height: 8px;
+    }
+    
+    .signup-btn {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+    
+    .destination-cards {
+        max-width: 100%;
+        width: 100%;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        margin-top: 20px;
+    }
+    
+    .card-title-short {
+        font-size: 14px;
+    }
+    
+    .card-overlay {
+        padding: 8px;
+    }
+    
+    .carousel-navigation {
+        justify-content: center;
+        margin-top: 15px;
+        position: relative;
+        bottom: auto;
+    }
+}
+
+/* Additional optimizations for very small screens */
+@media (max-width: 400px) {
+    .card {
+        width: calc(50% - 6px); /* Two cards with smaller gap */
+        margin-right: 6px;
+        min-height: 130px;
+    }
+    
+    .card-overlay {
+        padding: 6px;
+        bottom: 10px;
+        left: 10px;
+    }
+    
+    .card-title-short {
+        font-size: 12px;
+        line-height: 1.2;
+    }
+    
+    .carousel-navigation {
+        margin-top: 15px;
+    }
+    
+    .nav-arrow {
+        width: 28px;
+        height: 28px;
+        font-size: 16px;
+    }
+    
+    .destination-cards {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+    
+    .description-text {
+        font-size: 12px;
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 320px) {
+    .card {
+        width: calc(50% - 5px);
+        margin-right: 5px;
+        min-height: 100px;
+    }
+    
+    .card-overlay {
+        padding: 4px;
+        bottom: 5px;
+        left: 5px;
+    }
+    
+    .card-title-short {
+        font-size: 10px;
+        line-height: 1.1;
+    }
+    
+    .nav-arrow {
+        width: 20px;
+        height: 20px;
+        font-size: 12px;
+    }
+    
+    .carousel-navigation {
+        gap: 5px;
+    }
+}
+
+/* Ensure cards transition smoothly on all devices */
+.cards-container {
+    display: flex;
+    flex-wrap: nowrap;
+    transition: transform 0.4s cubic-bezier(0.25, 0.1, 0.25, 1);
+    padding: 10px 0;
+    will-change: transform;
+    margin: 0 auto;
+}
+
+.destination-cards {
+    overflow: hidden;
+    margin: 0 auto;
+    max-width: 90%;
+    position: relative;
+    touch-action: pan-x;
+}
+
+/* Hamburger menu - hidden by default */
+.hamburger-menu {
+    display: none;
+}
+
+/* Active card styles */
+.card.active {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Card size adjustments to show two cards at a time */
+.card {
+    width: calc(50% - 15px); /* Two cards with gap */
+    margin-right: 15px;
+    transition: all 0.4s ease;
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Card information styles for mobile view */
+.card-data-info {
+    margin: 15px auto;
+    text-align: center;
+    color: #fff;
+    max-width: 300px;
+    padding: 0 15px;
+}
+
+.card-info-location {
+    font-size: 12px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    opacity: 0.8;
+    letter-spacing: 1px;
+}
+
+.card-info-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-info-description {
+    font-size: 14px;
+    line-height: 1.4;
+    opacity: 0.9;
+}
+
+@media (max-width: 400px) {
+    .card-data-info {
+        max-width: 280px;
+        padding: 0 10px;
+    }
+    
+    .card-info-title {
+        font-size: 16px;
+    }
+    
+    .card-info-description {
+        font-size: 13px;
+    }
+}
+
+/* Make arrows easier to tap on small screens */
+.nav-arrow {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    touch-action: manipulation;
+} 

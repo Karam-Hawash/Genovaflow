@@ -1,0 +1,7 @@
+{
+    "liveServer.settings.port": 5502,
+    "cursor.cpp.enablePartialAccepts": false,
+    "cursor.cpp.disabledLanguages": [
+        "continue"
+    ]
+}

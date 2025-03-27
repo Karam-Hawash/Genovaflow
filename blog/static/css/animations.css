@@ -1,0 +1,138 @@
+/* Animations for Blog Posts */
+
+/* Base animation class - initially hidden */
+.animate-element {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Animation directions */
+.from-bottom {
+    transform: translateY(40px);
+}
+
+.from-top {
+    transform: translateY(-40px);
+}
+
+.from-left {
+    transform: translateX(-40px);
+}
+
+.from-right {
+    transform: translateX(40px);
+}
+
+.from-center {
+    transform: scale(0.9);
+}
+
+/* Delay classes */
+.delay-100 {
+    transition-delay: 0.1s;
+}
+
+.delay-200 {
+    transition-delay: 0.2s;
+}
+
+.delay-300 {
+    transition-delay: 0.3s;
+}
+
+.delay-400 {
+    transition-delay: 0.4s;
+}
+
+.delay-500 {
+    transition-delay: 0.5s;
+}
+
+.delay-600 {
+    transition-delay: 0.6s;
+}
+
+.delay-700 {
+    transition-delay: 0.7s;
+}
+
+.delay-800 {
+    transition-delay: 0.8s;
+}
+
+/* Animation active state */
+.animate-element.animate-active {
+    opacity: 1;
+    transform: translate(0) scale(1);
+}
+
+/* Animation sequences for specific elements */
+.staggered-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+}
+
+.staggered-children.animate-active > *:nth-child(1) {
+    transition-delay: 0.1s;
+}
+
+.staggered-children.animate-active > *:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.staggered-children.animate-active > *:nth-child(3) {
+    transition-delay: 0.3s;
+}
+
+.staggered-children.animate-active > *:nth-child(4) {
+    transition-delay: 0.4s;
+}
+
+.staggered-children.animate-active > *:nth-child(5) {
+    transition-delay: 0.5s;
+}
+
+.staggered-children.animate-active > *:nth-child(6) {
+    transition-delay: 0.6s;
+}
+
+.staggered-children.animate-active > *:nth-child(7) {
+    transition-delay: 0.7s;
+}
+
+.staggered-children.animate-active > * {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Initial loading animation for the overall page */
+.blog-container {
+    animation: fadeIn 0.8s ease-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Ensure transitions don't happen on page load with prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+    .animate-element {
+        transition: none;
+        animation: none;
+        opacity: 1;
+        transform: none;
+    }
+    
+    .staggered-children > * {
+        transition: none;
+        opacity: 1;
+        transform: none;
+    }
+} 

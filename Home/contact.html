@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+    <meta name="description" content="Contact Genovaflow - Let's discuss how we can transform your business with AI automation">
+    <meta name="keywords" content="contact, AI automation, Genovaflow, business solutions">
+    <title>Contact Us - Genovaflow</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            width: 100%;
+            height: 100%;
+            overflow-y: auto !important; /* Make scrollable */
+            background: black;
+            position: relative;
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+        }
+        
+        /* Updated Header styles from team.html */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(23, 22, 22, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            overflow: visible;
+            max-height: none;
+            min-height: 100px;
+            display: block;
+            visibility: visible !important;
+            opacity: 1 !important;
+            transition: box-shadow 0.3s ease;
+        }
+        
+        /* Header shadow effect on scroll */
+        .header.shadow {
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Navigation container with improved layout */
+        .nav-container {
+            max-width: 1800px; /* Increased from 1400px to make header wider */
+            margin: 0 auto;
+            padding: 12px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            position: relative;
+            overflow: visible;
+            visibility: visible !important;
+        }
+        
+        /* Logo container with proper spacing */
+        .logo-container {
+            display: flex;
+            width: 100%;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 15px;
+            position: relative;
+            overflow: visible;
+            height: auto;
+            min-height: 45px;
+        }
+        
+        /* Logo wrapper */
+        .logo {
+            position: relative;
+            z-index: 1001;
+            display: flex;
+            align-items: center;
+            padding-left: 5px;
+            overflow: visible;
+            height: auto;
+            left: -1%;
+            pointer-events: none; /* Make it unclickable */
+        }
+        
+        /* Logo image with specific class */
+        .logo-image {
+            height: 40px;
+            width: auto;
+            transform-origin: left center;
+            position: relative;
+            z-index: 1001;
+            object-fit: contain;
+            max-width: none;
+            display: block;
+            visibility: visible !important;
+            transition: none; /* Remove any transitions */
+        }
+        
+        /* Navigation links container */
+        .nav-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            width: 100%;
+            flex-wrap: wrap;
+            padding-top: 10px;
+            padding-left: 10px;
+        }
+        
+        /* Navigation link styling */
+        .nav-link {
+            color: #D9D9D9FF;
+            text-decoration: none;
+            font-size: 1.1rem;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            padding: 5px 10px;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #F4931DFF;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* Logo and header media queries */
+        /* Large screens (1200px and above) */
+        @media (min-width: 1200px) {
+            /* Header */
+            .header {
+                min-height: 110px;
+            }
+            
+            /* Logo */
+            .logo-container {
+                margin-bottom: 20px;
+            }
+            
+            .logo-image {
+                height: 40px;
+                transform: scale(5.5);
+                left: -18px;
+                top: 15px;
+            }
+            
+            /* Navigation */
+            .nav-links {
+                padding-top: 10px;
+                gap: 40px;
+            }
+            
+            .nav-link {
+                font-size: 1.1rem;
+                padding: 5px 12px;
+            }
+        }
+        
+        /* Medium screens (769px-1199px) */
+        @media (min-width: 769px) and (max-width: 1199px) {
+            /* Header */
+            .header {
+                min-height: 110px;
+            }
+            
+            /* Logo */
+            .logo-container {
+                margin-bottom: 20px;
+            }
+            
+            .logo-image {
+                height: 40px;
+                transform: scale(5.5);
+                left: -18px;
+                top: 15px;
+            }
+            
+            /* Navigation */
+            .nav-links {
+                padding-top: 10px;
+                gap: 30px;
+            }
+            
+            .nav-link {
+                font-size: 1rem;
+                padding: 5px 10px;
+            }
+        }
+        
+        /* Tablet screens (481px-768px) */
+        @media (min-width: 481px) and (max-width: 768px) {
+            /* Header */
+            .header {
+                min-height: 110px;
+            }
+            
+            /* Logo */
+            .logo-container {
+                margin-bottom: 15px;
+            }
+            
+            .logo-image {
+                height: 40px;
+                transform: scale(5.5);
+                left: -18px;
+                top: 15px;
+            }
+            
+            /* Navigation */
+            .nav-links {
+                padding-top: 10px;
+                gap: 15px;
+            }
+            
+            .nav-link {
+                font-size: 0.9rem;
+                padding: 5px 8px;
+            }
+            
+            /* Container */
+            .nav-container {
+                padding: 10px;
+            }
+        }
+        
+        /* Mobile screens (480px and below) */
+        @media (max-width: 480px) {
+            /* Header */
+            .header {
+                min-height: 90px;
+            }
+            
+            /* Logo */
+            .logo-container {
+                margin-bottom: 8px;
+            }
+            
+            .logo-image {
+                height: 35px;
+                transform: scale(4);
+                left: -15px;
+                top: 10px;
+            }
+            
+            /* Navigation */
+            .nav-links {
+                padding-top: 5px;
+                gap: 6px;
+                justify-content: center;
+                padding-left: 0;
+            }
+            
+            .nav-link {
+                font-size: 0.8rem;
+                padding: 4px 5px;
+            }
+        }
+
+        /* Adjust main content to account for taller header */
+        .contact-main {
+            padding-top: 160px; /* Increased padding to account for taller header */
+        }
+
+        /* Fix for horizontal overflow */
+        html, body {
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+            max-width: 100%;
+            overscroll-behavior: none;
+        }
+
+        section, div, footer, header {
+            max-width: 100%;
+            box-sizing: border-box;
+            overflow-x: hidden;
+        }
+
+        /* Footer Styles - Matching team.html */
+        .footer {
+            background: rgba(20, 20, 30, 0.8);
+            padding: 50px 0 20px;
+            position: relative;
+            z-index: 5;
+        }
+        
+        .footer-content {
+            max-width: 1800px; /* Increased from 1400px to match header width */
+            margin: 0 auto;
+            padding: 0 20px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .footer-section h4 {
+            font-size: 1.3rem;
+            color: #F4931D;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .footer-section p {
+            color: #8a8aa3;
+            margin-bottom: 15px;
+            line-height: 1.6;
+        }
+        
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .footer-social a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-social a:hover {
+            background: #F4931D;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section ul a {
+            color: #8a8aa3;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        
+        .footer-section ul a:hover {
+            color: #F4931D;
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Additional inline styles for specific color overrides - Keep from original */
+        .contact-hero h1 {
+            color: var(--primary-2);
+        }
+        .form-group input::placeholder,
+        .form-group textarea::placeholder,
+        .form-group select::placeholder {
+            color: var(--bg-1);
+            opacity: 0.7;
+        }
+        .social-links a {
+            background: var(--accent-1);
+            transition: all 0.3s ease;
+        }
+        .social-links a:hover {
+            background: var(--primary-2);
+            transform: translateY(-3px);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 15px 30px;
+            background: linear-gradient(45deg, #F4931D,rgb(255, 140, 0)) !important;
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+        .submit-btn span {
+            position: relative;
+            z-index: 1;
+            color: #fff;
+        }
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(244, 147, 29, 0.3);
+        }
+        .submit-btn.loading {
+            background: #8a8aa3 !important;
+            pointer-events: none;
+        }
+        .submit-btn.success {
+            background: #28a745 !important;
+        }
+        .info-section i {
+            color: var(--primary-2);
+        }
+        .background {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .background .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.98) 100%);
+            backdrop-filter: blur(10px);
+        }
+
+        /* Ensure content is scrollable */
+        .contact-main {
+            position: relative;
+            z-index: 2;
+            min-height: calc(100vh - 95px);
+            padding-top: 170px;
+            padding-bottom: 60px;
+        }
+
+        body {
+            background-color: #171616;
+            overflow-y: auto !important;
+            min-height: 100vh;
+        }
+        
+        @media (max-width: 768px) {
+            .contact-main {
+                padding-top: 150px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .contact-main {
+                padding-top: 130px;
+            }
+        }
+        
+        /* Make headers smaller on small screens (416px and under) */
+        @media (max-width: 416px) {
+            /* Reduce all headings by 15% */
+            h1, h2, h3, h4, h5, h6 {
+                font-size: 85%; /* 15% reduction */
+            }
+                    .nav-container {
+            max-width: 1800px; /* Increased from 1400px to make header wider */
+            margin: 0 auto;
+            padding: 0px 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            position: relative;
+            overflow: visible;
+            visibility: visible !important;
+        }
+
+            /* Specific header adjustments */
+            .contact-hero h1 {
+                font-size: 1.70rem; /* 15% smaller than regular h1 */
+            }
+            
+            .info-section h3 {
+                font-size: 1.275rem; /* 15% smaller than regular h3 */
+            }
+            
+            .footer-section h4 {
+                font-size: 1.1rem; /* 15% smaller than regular h4 */
+            }
+            
+            /* Adjust spacing around smaller headers */
+            .contact-hero {
+                margin-bottom: 1.7rem;
+            }
+            
+            .info-section {
+                padding: 0.85rem;
+            }
+            
+            /* Header navigation adjustments */
+            .header {
+                min-height: 76.5px; /* 15% smaller than 90px */
+            }
+            
+            .logo-container {
+                margin-bottom: 6.8px; /* 15% smaller than 8px */
+            }
+            
+            .logo-image {
+                height: 29.75px; /* 15% smaller than 35px */
+                transform: scale(3.4); /* 15% smaller than 4 */
+            }
+            
+            .nav-links {
+                padding-top: 4.25px; /* 15% smaller than 5px */
+                gap: 1px; /* 15% smaller than 6px */
+                scale: 0.8;
+            }
+            
+            .nav-link {
+                font-size: 0.68rem; /* 15% smaller than 0.8rem */
+                padding: 3.4px 4.25px; /* 15% smaller than 4px 5px */
+            }
+            
+            /* Adjust main content to account for smaller header */
+            .contact-main {
+                padding-top: 110.5px; /* 15% smaller than 130px */
+            }
+            
+            /* Form elements adjustments */
+            .form-group {
+                margin-bottom: 12.75px; /* 15% smaller than standard */
+            }
+            
+            .form-group input,
+            .form-group textarea,
+            .form-group select {
+                font-size: 0.85rem; /* 15% smaller */
+                padding: 8.5px; /* 15% smaller than standard padding */
+            }
+            
+            .form-group label {
+                font-size: 0.85rem; /* 15% smaller */
+            }
+            
+            /* Button adjustments */
+            .submit-btn {
+                padding: 12.75px 25.5px; /* 15% smaller than 15px 30px */
+                font-size: 0.935rem; /* 15% smaller than 1.1rem */
+                margin-top: 17px; /* 15% smaller than 20px */
+            }
+            
+            /* Footer adjustments */
+            .footer {
+                padding: 42.5px 0 17px; /* 15% smaller than 50px 0 20px */
+            }
+            
+            .footer-content {
+                gap: 25.5px; /* 15% smaller than 30px */
+            }
+            
+            .footer-social a {
+                width: 34px; /* 15% smaller than 40px */
+                height: 34px; /* 15% smaller than 40px */
+            }
+        }
+    </style>
+</head>
+<body class="contact-page">
+    <div class="background">
+        <img src="images/galaxy.svg" id="background-img" alt="Galaxy Flow">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Updated Header to match team.html -->
+    <header class="header">
+        <div class="nav-container">
+            <!-- Logo in top left -->
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="images/logo-cut.svg" alt="Logo" class="logo-image" draggable="false">
+                </div>
+            </div>
+            
+            <!-- Navigation links below logo -->
+            <nav class="nav-links">
+                <a href="index.html" class="nav-link">Home</a>
+                <a href="services+/index.html" class="nav-link">Services +</a>
+                <a href="contact.html" class="nav-link active">Contact Us</a>
+                <a href="/blog/blog.html" class="nav-link">Blog</a>
+                <a href="team.html" class="nav-link">Team</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="contact-main">
+        <div class="contact-hero">
+            <h1>Let's Create Something Amazing Together</h1>
+            <p>Transform your business with cutting-edge AI solutions</p>
+        </div>
+
+        <div class="contact-container">
+            <div class="contact-info-card">
+                <div class="info-section">
+                    <h3><i class="fas fa-envelope"></i> Email Us</h3>
+                    <p><a href="mailto:contact@genovaflow.com">contact@genovaflow.com</a></p>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-x"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+
+            <div class="contact-form-container">
+                <form id="contactForm" class="animated-form">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                    </div>
+
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" pattern="[0-9+\-\s]+">
+                        <label for="phone">Phone Number (Optional)</label>
+                    </div>
+
+                    <div class="form-group select-group">
+                        <select name="service" id="service" required>
+                            <option value="" disabled selected>Select Service of Interest</option>
+                            <option value="consulting">AI Consulting</option>
+                            <option value="chatbot">AI Chatbots</option>
+                            <option value="voice">Voice AI Solutions</option>
+                            <option value="automation">Process Automation</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group select-group">
+                        <select name="businessSize" id="businessSize" required>
+                            <option value="" disabled selected>Company Size</option>
+                            <option value="startup">Startup (1-10 employees)</option>
+                            <option value="growing">Growing Business (11-50 employees)</option>
+                            <option value="established">Established Enterprise (51-200 employees)</option>
+                            <option value="corporate">Corporate Organization (201-1000 employees)</option>
+                            <option value="bigcorp">Big Corporate Organization (1000+ employees)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4"></textarea>
+                        <label for="message">Have something to say? (Optional)</label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span>Book a Discovery Call</span>
+                        <div class="btn-particles"></div>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Updated Footer from team.html -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>We are a team of passionate developers and designers dedicated to creating innovative solutions for our clients.</p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-linkedin"></i></a>
+                    <a href="#"><i class="fab fa-x"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="services+/index.html">Services +</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="/blog/blog.html">Blog</a></li>
+                    <li><a href="team.html">Team</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><i class="fas fa-envelope"></i> contact@genovaflow.com</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Adding header scroll effect script -->
+    <script>
+        // Background parallax effect with smoothing
+        document.addEventListener("mousemove", (event) => {
+            const background = document.querySelector(".background");
+            if (background) {
+                const xOffset = (event.clientX / window.innerWidth - 0.5) * 20;
+                const yOffset = (event.clientY / window.innerHeight - 0.5) * 20;
+                
+                // Use requestAnimationFrame for smoother animation
+                requestAnimationFrame(() => {
+                    background.style.transform = `translate(${xOffset}px, ${yOffset}px) scale(1.05)`;
+                });
+            }
+        });
+        
+        document.addEventListener("DOMContentLoaded", () => {
+            createParticles();
+            
+            // Add header shadow on scroll
+            window.addEventListener('scroll', function() {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 10) {
+                    header.classList.add('shadow');
+                } else {
+                    header.classList.remove('shadow');
+                }
+            });
+        });
+        
+        // Create particle effect 
+        function createParticles() {
+            const particlesContainer = document.createElement('div');
+            particlesContainer.className = 'particles';
+            document.body.appendChild(particlesContainer);
+            
+            // Create particles
+            for (let i = 0; i < 30; i++) {
+                createParticle(particlesContainer);
+            }
+        }
+        
+        function createParticle(container) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            // Random size between 3-8px
+            const size = Math.random() * 3 + 2;
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            
+            // Random horizontal position
+            particle.style.left = `${Math.random() * 100}%`;
+            
+            // Random starting position from bottom
+            particle.style.bottom = '0';
+            
+            // Random delay
+            const delay = Math.random() * 12;
+            particle.style.animationDelay = `${delay}s`;
+            
+            // Random duration between 8-15s
+            const duration = Math.random() * 7 + 8;
+            particle.style.animationDuration = `${duration}s`;
+            
+            // Random opacity
+            const opacity = Math.random() * 0.4 + 0.2;
+            particle.style.opacity = opacity;
+            
+            container.appendChild(particle);
+            
+            // Remove and recreate particle after animation completes
+            setTimeout(() => {
+                particle.remove();
+                createParticle(container);
+            }, duration * 1000);
+        }
+    </script>
+    <script>
+        // Form animation
+        document.querySelectorAll('.form-group input, .form-group textarea').forEach(element => {
+            element.addEventListener('focus', function() {
+                this.parentElement.classList.add('focused');
+            });
+
+            element.addEventListener('blur', function() {
+                if (this.value === '') {
+                    this.parentElement.classList.remove('focused');
+                }
+            });
+
+            // Check on page load for pre-filled inputs
+            if (element.value !== '') {
+                element.parentElement.classList.add('focused');
+            }
+        });
+
+        // Particle animation for submit button
+        document.querySelector('.submit-btn').addEventListener('mousemove', function(e) {
+            const btn = this;
+            const rect = btn.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            
+            btn.style.setProperty('--x', x + 'px');
+            btn.style.setProperty('--y', y + 'px');
+        });
+
+        // Form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = this.querySelector('.submit-btn');
+            btn.classList.add('loading');
+            
+            // Simulate form submission
+            setTimeout(() => {
+                btn.classList.remove('loading');
+                btn.classList.add('success');
+                btn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                
+                // Reset form after success
+                setTimeout(() => {
+                    this.reset();
+                    // Reset all form groups
+                    document.querySelectorAll('.form-group').forEach(group => {
+                        group.classList.remove('focused');
+                    });
+                    btn.classList.remove('success');
+                    btn.innerHTML = '<span>Book a Discovery Call</span><div class="btn-particles"></div>';
+                }, 3000);
+            }, 2000);
+        });
+
+        // Scroll animation
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.contact-info-card, .contact-form-container');
+            elements.forEach(element => {
+                const rect = element.getBoundingClientRect();
+                const isVisible = rect.top < window.innerHeight - 100;
+                
+                if (isVisible) {
+                    element.classList.add('visible');
+                }
+            });
+        };
+
+        window.addEventListener('scroll', animateOnScroll);
+        window.addEventListener('load', animateOnScroll);
+    </script>
+</body>
+</html> 

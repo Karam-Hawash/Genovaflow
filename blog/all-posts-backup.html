@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Insights Hub - All Posts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/all-posts.css">
+    <link rel="stylesheet" href="static/css/style.css">
+
+</head>
+<body>
+    <div class="travel-container">
+        <div class="background-overlay"></div>
+        <header class="header">
+            <div class="logo">
+                <div class="logo-image" style="position: relative; left: -20px; top: 5px;">
+                    <img src="all-posts/posts-images/logo-image.svg" alt="Genovaflow Blog Logo" width="40" height="40">
+                </div>
+                <span class="logo-text" style="position: relative; right: -30px; top: -34.5px;">Genovaflow Blog</span>
+                <p class="location" style="position: relative; right: -30px; top: -34.5px;">Your Gateway to AI Innovation</p>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="blog.html">Home</a></li>
+                    <li class="active"><a href="all-posts.html">All</a></li>
+                    <li><a href="all-posts.html">Categories</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="contact-us.html">About</a></li>
+                </ul>
+            </nav>
+            <div class="header-icons">
+                <a href="#" class="search-icon" id="search-icon">
+                    <svg width="25" height="25" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="white"/>
+                    </svg>
+                </a>
+                <a href="#" class="signup-btn" id="subscribe-btn">Subscribe</a>
+            </div>
+        </header>
+
+        <!-- Spacing element to prevent header overlap -->
+        <div class="header-spacer"></div>
+
+        <main class="all-posts-container">
+            <div class="page-header">
+                <h1>All AI Insights</h1>
+                <p>Explore our collection of blog posts on AI and emerging technology.</p>
+            </div>
+
+            <div class="filter-controls">
+                <div class="filter-categories">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="AI in Industry">AI in Industry</button>
+                    <button class="filter-btn" data-category="Tech Innovations">Tech Innovations</button>
+                    <button class="filter-btn" data-category="AI Tutorials">AI Tutorials</button>
+                    <button class="filter-btn" data-category="Future Trends">Future Trends</button>
+                </div>
+                <div class="filter-options">
+                    <div class="search-control">
+                        <input type="text" id="filter-search" placeholder="Search posts..." class="filter-search">
+                    </div>
+                    <div class="sort-control">
+                        <label for="sort-select">Sort by:</label>
+                        <div class="sort-dropdown">
+                            <button class="sort-button" id="sort-button">Latest</button>
+                            <div class="sort-options" id="sort-options">
+                                <div class="sort-option" data-value="latest">Latest</div>
+                                <div class="sort-option" data-value="oldest">Oldest</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="all-posts-grid" id="all-posts-grid">
+                <!-- Post 1 -->
+                <div class="post-card" data-category="Tech Innovations">
+                    <div class="post-image">
+                        <img src="static/images/ai-image.jpg" alt="AI Agentic">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">Tech Innovations</div>
+                        <h2 class="post-title">AI Agentic: The Rise of Autonomous Systems</h2>
+                        <p class="post-excerpt">The evolution of agentic systems, their technical foundations and emerging capabilities.</p>
+                        <a href="all-posts/tech-innovations/ai-agentic.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+
+                <!-- Post 2 -->
+                <div class="post-card" data-category="Future Trends">
+                    <div class="post-image">
+                        <img src="static/images/529b6fa5-e118-4cc9-8a11-351e1069fc83.jpg" alt="AI Robots">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">Future Trends</div>
+                        <h2 class="post-title">AI Robots: Pioneering a New Era of Innovation and Collaboration</h2>
+                        <p class="post-excerpt">Explore the groundbreaking advancements in AI robotics and their real-world applications.</p>
+                        <a href="all-posts/future-trends/ai-future-robots.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+
+                <!-- Post 3 -->
+                <div class="post-card" data-category="AI in Industry">
+                    <div class="post-image">
+                        <img src="all-posts/posts-images/trading 2.jpg" alt="ai-in-finance">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">AI in Industry</div>
+                        <h2 class="post-title">AI in Finance: Revolutionizing Modern Trading and Investment</h2>
+                        <p class="post-excerpt">Explore how AI technologies are reshaping financial services and their impact on market efficiency.</p>
+                        <a href="all-posts/ai-in-industry/ai-in-financial-services.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+
+                <!-- Post 4 -->
+                <div class="post-card" data-category="Future Trends">
+                    <div class="post-image">
+                        <img src="all-posts/posts-images/company 6.jpg" alt="ai-company">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">Future Trends</div>
+                        <h2 class="post-title">The Future of Companies Using AI in Every Task</h2>
+                        <p class="post-excerpt">Explore how AI is transforming businesses and shaping a future where every task is enhanced by intelligent systems.</p>
+                        <a href="all-posts/future-trends/ai-company.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+
+                <!-- Post 5 -->
+                <div class="post-card" data-category="AI Tutorials">
+                    <div class="post-image">
+                        <img src="all-posts/posts-images/automation tools 2.jpg" alt="AI Automation Tools">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">AI Tutorials</div>
+                        <h2 class="post-title">AI Automation Elite: Tools Transforming Business Operations</h2>
+                        <p class="post-excerpt">Discover the cutting-edge platforms driving 300-400% ROI increases for enterprises worldwide.</p>
+                        <a href="all-posts/ai-tutorials/ai-automation-tools.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+
+                <!-- Post 6 -->
+                <div class="post-card" data-category="AI in Industry">
+                    <div class="post-image">
+                        <img src="all-posts/posts-images/healthcare-3.jpg" alt="AI in Healthcare">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">AI in Industry</div>
+                        <h2 class="post-title">AI in Healthcare: Transforming Modern Medicine</h2>
+                        <p class="post-excerpt">Explore how AI technologies are being integrated into medical practice, their impact on healthcare outcomes.</p>
+                        <a href="all-posts/ai-in-industry/ai-in-healthcare.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+
+                <!-- Post 7 -->
+                <div class="post-card" data-category="Tech Innovations">
+                    <div class="post-image">
+                        <img src="all-posts/posts-images/network 3.jpg" alt="Neural Networks">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">Tech Innovations</div>
+                        <h2 class="post-title">Neural Networks: The Building Blocks of Modern AI</h2>
+                        <p class="post-excerpt">Discover how neural networks form the foundation of today's most advanced AI systems.</p>
+                        <a href="all-posts/tech-innovations/neural-networks.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+
+                <!-- Post 8 -->
+                <div class="post-card" data-category="AI Tutorials">
+                    <div class="post-image">
+                        <img src="all-posts/posts-images/llm.png" alt="llm-differences">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">AI Tutorials</div>
+                        <h2 class="post-title">Mastering AI Capabilities: The Unique Strengths of Large Language Models</h2>
+                        <p class="post-excerpt">Explore the unique strengths of leading AI models.</p>
+                        <a href="all-posts/ai-tutorials/llm-differences.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+
+                <!-- Post 9 -->
+                <div class="post-card" data-category="AI in industry">
+                    <div class="post-image">
+                        <img src="all-posts/posts-images/realestate.jpg" alt="AI in Real Estate">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-category">AI in industry</div>
+                        <h2 class="post-title">AI in Real Estate: Transforming Property Markets</h2>
+                        <p class="post-excerpt">AI technologies are reshaping property transactions and empowering real estate agents.</p>
+                        <a href="all-posts/ai-in-industry/ai-in-real-estate.html" class="read-more">Read →</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <button class="pagination-btn active">1</button>
+                <button class="pagination-btn">2</button>
+                <button class="pagination-btn">3</button>
+                <button class="pagination-btn next">Next →</button>
+            </div>
+            
+            <!-- Featured Posts Section -->
+            <div class="featured-section">
+                <h2 class="section-title">Featured Posts</h2>
+                <p class="section-description">Highlighted blog posts selected by our editors</p>
+                
+                <div class="featured-grid">
+                    <!-- Featured Post 1 -->
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="all-posts/posts-images/rag 9.jpg" alt="Featured: RAG">
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-label">EDITOR'S PICK</div>
+                            <div class="featured-category">AI Tutorials</div>
+                            <h3 class="featured-title">RAG: Enhancing AI with Retrieval-Augmented Generation</h3>
+                            <p class="featured-excerpt">Examine RAG's technical architecture and its transformative potential in knowledge-intensive tasks.</p>
+                            <a href="all-posts/ai-tutorials/rag.html" class="featured-link">Read →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Post 2 -->
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="static/images/ai-image.jpg" alt="Featured: AI Agentic">
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-label">POPULAR</div>
+                            <div class="featured-category">Tech Innovations</div>
+                            <h3 class="featured-title">AI Agentic: The Rise of Autonomous Systems</h3>
+                            <p class="featured-excerpt">The evolution of agentic systems, their technical foundations and emerging capabilities.</p>
+                            <a href="all-posts/tech-innovations/ai-agentic.html" class="featured-link">Read →</a>
+                        </div>
+                    </div>
+                    
+                    <!-- Featured Post 3 -->
+                    <div class="featured-card">
+                        <div class="featured-image">
+                            <img src="all-posts/posts-images/healthcare-3.jpg" alt="Featured: ai-in-healthcare">
+                        </div>
+                        <div class="featured-content">
+                            <div class="featured-label">TRENDING</div>
+                            <div class="featured-category">AI in Industry</div>
+                            <h3 class="featured-title">AI in Healthcare: Transforming Modern Medicine</h3>
+                            <p class="featured-excerpt">Explore how AI technologies are being integrated into medical practice, their impact on healthcare outcomes.</p>
+                            <a href="#" class="featured-link">Read →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <footer class="site-footer">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-text">Genovaflow Blog</span>
+                    <p>Your Gateway to AI Innovation</p>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="blog.html">Home</a></li>
+                            <li><a href="#">All Posts</a></li>
+                            <li><a href="#">Categories</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Categories</h4>
+                        <ul>
+                            <li><a href="#">AI in Industry</a></li>
+                            <li><a href="#">Tech Innovations</a></li>
+                            <li><a href="#">AI Tutorials</a></li>
+                            <li><a href="#">Future Trends</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h4>Connect</h4>
+                        <ul>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">X</a></li>
+                            <li><a href="#">Instagram</a></li>
+                            <li><a href="#">Facebook</a></li>
+                            <li><a href="#">Subscribe to Newsletter</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Genovaflow Blog. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+    
+    <!-- Newsletter Subscription Overlay -->
+    <div class="subscription-overlay" id="subscription-overlay">
+        <div class="subscription-container">
+            <div class="subscription-header">
+                <h2>Subscribe to Our Newsletter</h2>
+                <button class="close-btn" id="close-subscription">×</button>
+            </div>
+            <p>Stay updated with the latest insights in AI technology</p>
+            <div class="subscription-form">
+                <input type="email" id="email-input" placeholder="Enter your email" required>
+                <button id="confirm-subscribe" disabled>Subscribe</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="search-overlay">
+        <div class="search-container">
+            <div class="search-header">
+                <h2>Search AI Insights</h2>
+                <button class="close-btn" id="close-search">×</button>
+            </div>
+            <div class="search-input-container">
+                <input type="text" id="search-input" placeholder="Search for...">
+                <button id="search-button">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z" fill="white"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="search-results">
+                <h3 id="search-results-title">Suggested Blog Posts</h3>
+                <div class="search-results-grid" id="search-results-grid">
+                    <!-- Search results will be dynamically added here -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="static/js/transitions.js"></script>
+    <script src="static/js/all-posts.js"></script>
+    <script>
+        // Make all cards clickable
+        document.addEventListener('DOMContentLoaded', function() {
+            // Make regular post cards clickable
+            document.querySelectorAll('.post-card').forEach(card => {
+                const link = card.querySelector('.read-more');
+                if (link && link.href) {
+                    card.addEventListener('click', function(e) {
+                        // Don't navigate if clicking on the actual link (to avoid double-navigation)
+                        if (e.target === link || link.contains(e.target)) {
+                            return;
+                        }
+                        window.location.href = link.href;
+                    });
+                }
+            });
+            
+            // Make featured cards clickable
+            document.querySelectorAll('.featured-card').forEach(card => {
+                const link = card.querySelector('.featured-link');
+                if (link && link.href) {
+                    card.addEventListener('click', function(e) {
+                        // Don't navigate if clicking on the actual link
+                        if (e.target === link || link.contains(e.target)) {
+                            return;
+                        }
+                        window.location.href = link.href;
+                    });
+                }
+            });
+            
+            console.log('Cards are now clickable!');
+        });
+    </script>
+<script src=" static/js/clickable-cards.js\></script></body>
+</html> 

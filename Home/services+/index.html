@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <title>Genovaflow - AI Automation Services</title>
+  <meta name="description" content="Explore our comprehensive AI automation services including chatbots, voice agents, and custom business solutions." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header - Updated to match team.html -->
+  <header class="header">
+    <div class="nav-container">
+        <!-- Logo in top left -->
+        <div class="logo-container">
+            <div class="logo">
+                <img src="../images/logo-cut.svg" alt="Logo" class="logo-image" draggable="false">
+            </div>
+        </div>
+        
+        <!-- Navigation links below logo -->
+        <nav class="nav-links">
+            <a href="../index.html" class="nav-link">Home</a>
+            <a href="../services+/index.html" class="nav-link active">Services +</a>
+            <a href="../contact.html" class="nav-link">Contact Us</a>
+            <a href="../../blog/blog.html" class="nav-link">Blog</a>
+            <a href="../team.html" class="nav-link">Team</a>
+        </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+      <h2>Our AI Solutions</h2>
+      
+      <div class="service-card slide-from-left">
+        <div class="card-image">
+          <img src="images-services/consulting.jpg" alt="AI Strategy & Consulting" />
+        </div>
+        <div class="card-content">
+          <h3>AI Consulting</h3>
+          <p>Transform your business with expert AI guidance. Our consulting services help you identify opportunities, develop strategies, and implement cutting-edge AI solutions tailored to your needs.</p>
+          <button onclick="scrollToContact()">Book a Discovery Call</button>
+        </div>
+      </div>
+
+      <div class="service-card slide-from-right">
+        <div class="card-image">
+          <img src="images-services/chatbot.svg" alt="AI Chatbots Development" />
+        </div>
+        <div class="card-content">
+          <h3>AI Chatbots</h3>
+          <p>Enhance customer engagement with AI chatbots. Perfect for inbound and outbound reach. They provide 24/7 support, handle multiple queries simultaneously, and learn from each interaction to improve service quality.</p>
+          <button onclick="scrollToContact()">Book a Discovery Call</button>
+        </div>
+      </div>
+
+      <div class="service-card slide-from-left">
+        <div class="card-image">
+          <img src="images-services/voiceagent.jpg" alt="AI Voice Agents" />
+        </div>
+        <div class="card-content">
+          <h3>Voice AI Solutions</h3>
+          <p>Create natural conversations with AI voice agents. Our voice solutions use advanced natural language processing to deliver human-like interactions. It's perfect for inbound and outbound reach like customer service and virtual assistances.</p>
+          <button onclick="scrollToContact()">Book a Discovery Call</button>
+        </div>
+      </div>
+
+      <div class="service-card slide-from-right">
+        <div class="card-image">
+          <img src="images-services/automations.jpg" alt="SmartProcess Automation Systems" />
+        </div>
+        <div class="card-content">
+          <h3>Process Automation</h3>
+          <p>Streamline operations with intelligent automations. Our custom automation solutions help reduce costs, minimize errors, and free up your team to focus on strategic tasks.</p>
+          <button onclick="scrollToContact()">Book a Discovery Call</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+      <h2>Start Your AI Journey</h2>
+      <div class="contact-info">
+        <p>Ready to transform your business with AI? Let's talk.</p>
+        <p>Email: <a href="mailto:contact@genovaflow.com">contact@genovaflow.com</a></p>
+        <p>
+          Connect with us:
+          <a href="#" target="_blank" rel="noopener">LinkedIn</a> |
+          <a href="#" target="_blank" rel="noopener">X</a> |
+          <a href="#" target="_blank" rel="noopener">Instagram</a> |
+          <a href="#" target="_blank" rel="noopener">Facebook</a>
+
+        </p>
+      </div>
+      
+      <form id="contactForm">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <input type="tel" name="phone" placeholder="Phone Number (Optional)" pattern="[0-9+\-\s]+" />
+        
+        <select name="service" required>
+          <option value="">Select Service of Interest</option>
+          <option value="consulting">AI Consulting</option>
+          <option value="chatbot">AI Chatbots</option>
+          <option value="voice">Voice AI Solutions</option>
+          <option value="automation">Process Automation</option>
+          <option value="other">Another</option>
+        </select>
+        
+        <select name="businessSize" required>
+          <option value="">Company Size</option>
+          <option value="startup">Startup (1-10 employees)</option>
+          <option value="growing">Growing Business (11-50 employees)</option>
+          <option value="established">Established Enterprise (51-200 employees)</option>
+          <option value="corporate">Corporate Organization (201-1000 employees)</option>
+          <option value="bigcorp">Big Corporate Organization (1000+ employees)</option>
+        </select>
+        
+        <textarea name="message" rows="4" placeholder="Have something to say? (Optional)"></textarea>
+        <button type="submit">Book a meeting</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About Us</h4>
+        <p>We are a team of passionate developers and designers dedicated to creating innovative solutions for our clients.</p>
+        <div class="footer-social">
+          <a href="#"><i class="fab fa-linkedin"></i></a>
+          <a href="#"><i class="fab fa-x"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../services+/index.html">Services +</a></li>
+          <li><a href="../contact.html">Contact Us</a></li>
+          <li><a href="../../blog/blog.html">Blog</a></li>
+          <li><a href="../team.html">Team</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Contact Info</h4>
+        <p><i class="fas fa-envelope"></i> contact@genovaflow.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
