@@ -1,6 +1,12 @@
 {
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
-  }
+  "framework": "static",
+  "outputDirectory": ".",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/", "dest": "/Home/index.html" },
+    { "src": "/blog", "dest": "/blog/blog.html" },
+    { "src": "/blog/(.*)", "dest": "/blog/$1" },
+    { "src": "/(.*)", "dest": "/Home/$1" }
+  ]
+}
   
