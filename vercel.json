@@ -1,11 +1,12 @@
 {
+  "version": 2,
   "cleanUrls": true,
   "trailingSlash": false,
-  "rewrites": [
-    { "source": "/", "destination": "/Home/index.html" },
-    { "source": "/blog", "destination": "/blog/blog.html" },
-    { "source": "/blog/:path*", "destination": "/blog/:path*" },
-    { "source": "/:path*", "destination": "/Home/:path*" }
+  "routes": [
+    { "src": "^/$", "dest": "/Home/index.html" },
+    { "src": "/blog/?$", "dest": "/blog/blog.html" },
+    { "src": "/blog/(.*)", "dest": "/blog/$1" },
+    { "src": "/(.*)", "dest": "/Home/$1" }
   ]
 }
 
