@@ -1,5 +1,4 @@
 {
-  "framework": "static",
   "outputDirectory": ".",
   "routes": [
     { "handle": "filesystem" },
